@@ -1,0 +1,19 @@
+{
+  "name": "جدول الحصص الدراسية",
+  "short_name": "الجدول",
+  "description": "تطبيق جدول الحصص الدراسية قابل للتعديل والحفظ ويعمل بدون إنترنت",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1f2937",
+  "theme_color": "#1f2937",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

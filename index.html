@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1f2937">
+  <meta name="description" content="جدول الحصص الدراسية قابل للتعديل والحفظ مع دعم العمل بدون إنترنت">
+  <title>جدول الحصص الدراسية</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon-512.png">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>📚 جدول الحصص الدراسية</h1>
+      <p>من الاثنين إلى السبت · صباحاً 08:00–12:00 · مساءً 14:00–18:00</p>
+    </div>
+    <div class="app-download-group">
+      <button id="installBtn" class="install-btn">📲 تثبيت التطبيق (PWA)</button>
+      <a href="app.apk" download="SchoolSchedule.apk" class="apk-btn">📥 تحميل ملف APK</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <button id="saveBtn">💾 حفظ الجدول</button>
+      <button id="mergeBtn">🔗 دمج مع الخانة اللي تحت</button>
+      <button id="unmergeBtn">↔️ إلغاء الدمج</button>
+
+      <label class="color-control">
+        🎨 لون الخانة
+        <input id="colorPicker" type="color" value="#ffffff">
+      </label>
+
+      <button id="clearBtn" class="danger">🗑️ مسح الجدول</button>
+    </section>
+
+    <div id="status" class="status" aria-live="polite"></div>
+
+    <section class="table-wrap">
+      <table id="schedule">
+        <thead>
+          <tr>
+            <th class="time-head">الوقت</th>
+            <th>الإثنين</th>
+            <th>الثلاثاء</th>
+            <th>الأربعاء</th>
+            <th>الخميس</th>
+            <th>الجمعة</th>
+            <th>السبت</th>
+          </tr>
+        </thead>
+        <tbody id="morningBody">
+          <tr class="period-row"><th colspan="7">☀️ الفترة الصباحية</th></tr>
+        </tbody>
+        <tbody id="afternoonBody">
+          <tr class="period-row"><th colspan="7">🌙 الفترة المسائية</th></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="help">
+      <h2>طريقة الاستعمال والتثبيت</h2>
+      <ul>
+        <li><b>الكتابة والتعديل:</b> اضغط على أي خانة واكتب اسم المادة أو المعلومة المطلوبة.</li>
+        <li><b>تغيير الألوان:</b> اختر الخانة ثم اختر لونها المفضل من أيقونة 🎨.</li>
+        <li><b>دمج الحصص:</b> لحصة من ساعتين، اختر الخانة الأولى واضغط «دمج مع الخانة اللي تحت».</li>
+        <li><b>إلغاء الدمج:</b> زر «إلغاء الدمج» يعيد الخانة المدمجة لخانتين منفصلتين.</li>
+        <li><b>الحفظ:</b> زر «حفظ الجدول» (أو Ctrl + S) يحفظ التعديلات محلياً على جهازك.</li>
+        <li><b>تثبيت PWA (WebAPK):</b> اضغط على «تثبيت التطبيق» لتثبيته مباشره بدون تحميل ملفات.</li>
+        <li><b>تحميل APK:</b> إذا أنشأت ملف APK عبر PWABuilder ووفرته باسم <code>app.apk</code> فالمجلد، يمكنك تحميله مباشرة.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>جدول الحصص · قابل للتعديل والحفظ على الجهاز · يعمل بدون إنترنت (Offline)</footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
